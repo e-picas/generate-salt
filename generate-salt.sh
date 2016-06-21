@@ -58,6 +58,8 @@ error() {
 # usage string
 usage() {
     echo "usage: $0 <preset> [length=default]"
+    echo "       $0 [-h|-V|--help|--version]"
+    echo
     echo "available presets:"
     printf "\t%13s\t%s\t%-30s" 'name' 'length' 'mask'
     printf "\n\t%13s\t%s\t%-30s" '----------' '------' '----'
@@ -66,7 +68,7 @@ usage() {
             "${presets[$pre]} :" "${presets_length[$pre]}" "${presets_mask[$pre]}";
     done
     echo
-    echo '---'
+    echo
     echo "e.g. $0 alpha      : dlNMPuMhfXCG"
     echo "     $0 basic 18   : VjO23Jv4K@2&sLwUF4"
     echo "     $0 hard 64    : vDm@UMG%5+CKsgY5xJX]jA(WtsN^8Ik;/,k6mFW.qNRvq(bf(WM+E2tGaR\`R(m@]"
